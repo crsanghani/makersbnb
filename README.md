@@ -37,6 +37,10 @@ request to hire any space for one night
 
 As a user
 I would like to be able to
+book a space for a range of dates
+
+As a user
+I would like to be able to
 edit a space
 
 As a user
@@ -46,6 +50,10 @@ not book spaces that are already booked
 As a user
 I would like to be able to
 book a space that has not been confirmed yet
+
+As a user
+I would like to be able to
+post images of my space
 ~~~
 
 # Planned User Stories
