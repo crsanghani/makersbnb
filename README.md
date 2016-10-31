@@ -1,8 +1,7 @@
-# makersbnb
-makers BnB challenge
+# MakersBnB
+Makers BnB challenge
 
 # User Stories
-----
 ~~~
 As a human
 I would like to be able to
@@ -50,7 +49,6 @@ book a space that has not been confirmed yet
 ~~~
 
 # Planned User Stories
-----
 ~~~
 As a user
 I would like to receive an email when
