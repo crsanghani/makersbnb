@@ -1,7 +1,7 @@
 feature 'Viewing spaces' do
 
   scenario 'I can see existing spaces on the spaces page' do
-    Space.create(name: 'Luxury Box', price: 500, location: 'London')
+    Space.create(name: 'Luxury Box', price: 500, location: Location.create(name: :London))
 
     visit '/spaces'
 
@@ -12,9 +12,5 @@ feature 'Viewing spaces' do
       expect(page).to have_content('500')
       expect(page).to have_content('London')
     end
-
   end
-
-
-
 end
