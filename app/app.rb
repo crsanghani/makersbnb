@@ -4,7 +4,7 @@ require 'sinatra/base'
 require 'sinatra/flash'
 require 'sinatra/partial'
 require 'haml'
-
+require 'rerun'
 require_relative 'data_mapper_setup'
 
 require_relative 'server'

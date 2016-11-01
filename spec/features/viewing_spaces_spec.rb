@@ -9,8 +9,12 @@ feature 'Viewing spaces' do
 
     within 'ul#spaces' do
       expect(page).to have_content('Luxury Box')
+      expect(page).to have_content('500')
+      expect(page).to have_content('London')
     end
 
   end
+
+
 
 end
