@@ -18,6 +18,5 @@ group :test do
  gem 'rspec'
  gem 'capybara'
  gem 'rspec-sinatra'
- gem 'rerun'
  gem 'database_cleaner'
 end
