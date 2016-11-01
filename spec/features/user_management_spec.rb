@@ -74,12 +74,12 @@ feature 'Resetting Password' do
     visit '/users/recover'
     fill_in :email, with: "alice@example.com"
     click_button "Submit"
-    expect(page).to have_content "Thanks, Please check your inbox for the link."
+    expect(page).to have_content "Thanks. Please check your inbox for the link."
   end
 
   scenario 'When I enter my email I am told to check my inbox' do
     recover_password
-    expect(page).to have_content "Thanks, Please check your inbox for the link."
+    expect(page).to have_content "Thanks. Please check your inbox for the link."
   end
 
   scenario 'assigned a reset token to the user when they recover' do

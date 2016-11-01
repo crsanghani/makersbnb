@@ -1,5 +1,6 @@
 require 'data_mapper'
 require 'dm-postgres-adapter'
+require 'timecop'
 
 require_relative 'models/user'
 require_relative 'models/space'
