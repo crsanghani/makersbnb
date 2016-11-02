@@ -3,9 +3,10 @@
 <ul id='spaces'>
  <% @spaces.each do |space| %>
    <li>
-     Name: <%= space.name %>
-     Price: £<%= space.price %>
-     Location: <a href="/locations/<%= space.location.name %>"><%= space.location.name %></a>
+     Name: <%= space.name %></br>
+     Price: £<%= space.price %></br>
+     Location: <a href="/locations/<%= space.location.name %>"><%= space.location.name %></a></br>
+     Description: <%= space.description %></br>
    </li>
  <% end %>
 </ul>

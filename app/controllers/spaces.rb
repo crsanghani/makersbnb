@@ -10,7 +10,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/spaces' do
-    space  = Space.new(name: params[:name], price: params[:price])
+    space  = Space.new(name: params[:name], price: params[:price], description: params[:description])
     location = Location.first_or_create(name: (params[:location]).intern)
     space.location = location
     space.save
@@ -18,7 +18,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/spaces/new' do
-    haml :'spaces/new'
+    erb :'spaces/new'
   end
 
 end
