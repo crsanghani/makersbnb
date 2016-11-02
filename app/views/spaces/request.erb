@@ -6,5 +6,8 @@
 
 <h1>Pick your dates!</h1>
 
+<form action="/request/new" method="post">
 <input name="from" type="date" min='<%= @space.available_from %>'>
 <input name="to" type="date" min='<%= @space.available_to %>'>
+<input type="submit" value="Request space">
+</form>
