@@ -3,8 +3,8 @@ body {
 }
 
 .nav-ul{
-    position: relative;
-    bottom: 35px;
+  position: relative;
+  bottom: 35px;
 }
 
 .navbar{
@@ -16,5 +16,16 @@ body {
 }
 
 #doorstop-nav{
-    margin-right: 20px;
+  margin-right: 20px;
+}
+
+form {
+  margin-top: 25%;
+  padding: 10px;
+}
+
+section {
+  border-radius: 30px;
+  background-color: wheat;
+  opacity: 0.9;
 }
