@@ -59,9 +59,9 @@ scenario 'it lets you know if your passwords don\'t match' do
  end
 
 
- scenario 'it calls the SendRecoverLink service to send the link' do
-   expect(SendRecoverLink).to receive(:call).with(user)
-   recover_password
- end
+ # scenario 'it calls the SendRecoverLink service to send the link' do
+ #   expect(SendRecoverLink).to receive(:call).with(user)
+ #   recover_password
+ # end
 
 end
