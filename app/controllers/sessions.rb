@@ -1,5 +1,9 @@
 class Makersbnb < Sinatra::Base
 
+  get '/' do
+    erb: 'sessions/new'
+  end
+
   get '/sessions/new' do
     erb :'sessions/new'
   end
