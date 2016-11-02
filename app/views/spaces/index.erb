@@ -7,6 +7,9 @@
      Price: £<%= space.price %></br>
      Location: <a href="/locations/<%= space.location.name %>"><%= space.location.name %></a></br>
      Description: <%= space.description %></br>
+     <form method="get" action="/spaces/<%= space.id%>">
+     <input type="submit" value="Book Space">
+     </form>
    </li>
  <% end %>
 </ul>
