@@ -4,10 +4,13 @@ require 'securerandom'
 class User
   include DataMapper::Resource
 
+  has n, :spaces
+  has n, :requests
+
   property :id, Serial
   property :email, String, format: :email_address, required: true, unique: true
   property :password_digest, Text
-   property :password_token, String, length: 60
+  property :password_token, String, length: 60
 
   attr_reader :password
   attr_accessor :password_confirmation

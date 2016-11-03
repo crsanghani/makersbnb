@@ -1,11 +1,11 @@
-<h2> Create a Space </h2>
+<h2> Tell us about your space. </h2>
 
 <form action='/spaces' method='post'>
   <input name='name' type='text' placeholder="name your spooky space">
   <input name='location' type='text' placeholder="set your location">
   <input name='price' type='number' placeholder="set your price">
   <input name='description' type='textarea' rows='4' cols='50' placeholder="tell us about your space">
-  <input id="from" name="from" type="date" min='<%= DateTime.now %>'>
-  <input id="to" name="to" type="date" min='<%= (DateTime.now)+1 %>'>
+  <input name="available_from" type="date">
+  <input name="available_to" type="date">
   <input type='submit' value='List your space'>
 </form>

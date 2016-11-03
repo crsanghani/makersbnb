@@ -1,0 +1,20 @@
+<h1>Take a look at <%= @space.name %>!</h1>
+
+<h3>Price: £<%= @space.price %></h3></br>
+
+<h3>Description:</h3></br>
+<p><%= @space.description %></p>
+
+<h3>Available From:</h3></br>
+<%=@space.available_from %>
+<h3>to</h3></br>
+  <%=@space.available_to %>
+
+<h3>Pick your dates!</h3>
+
+<form action="/requests" method="post">
+<input name="date_from" type="date" min='<%= @space.available_from %>' max='<%= @space.available_to - 1%>'>
+<input name="date_to" type="date" min="<%= @space.available_from + 1 %>" max='<%= @space.available_to %>'>
+<input type="hidden" name="space" value='<%= @space.id %>'>
+<input type="submit" value="Request space">
+</form>

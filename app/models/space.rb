@@ -2,6 +2,9 @@ class Space
   include DataMapper::Resource
 
   belongs_to :location
+  belongs_to :user
+
+  has n, :requests
 
   property :id, Serial
   property :name, String, length: 140, required: true

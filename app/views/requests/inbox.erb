@@ -1,0 +1,15 @@
+<h1>Your requests</h1>
+
+<div id='requests_made'>
+  <ul>  <% @requests_made.each do |request| %>
+    <li>
+      <%= request.space.name %>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+<!--
+<div id='requests_received'>
+  <%= @requests_received %>
+</div> -->
