@@ -13,7 +13,10 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-12"><h2>Please sign up and enjoy the view of this pumpkin</h2></div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
       <form action='/users' method='post'>
         <label for='email'>
           Email: <input name='email' type='email' value='<%= @user.email %>' required>
@@ -22,10 +25,13 @@
           Password: <input name='password' type='password'>
         </label>
         <label for='password_confirmation'>
-          Password: <input name='password_confirmation' type='password'>
+          Password Confirmation: <input name='password_confirmation' type='password'>
         </label>
         <input type='submit' value='Sign up'>
       </form>
     </div>
+    <div class="col-lg-8">
+      <img class="img-responsive" src="http://www.victorystore.com/media/catalog/product/cache/1/image/700x700/9df78eab33525d08d6e5fb8d27136e95/s/c/scary-jack-o-lantern-44in-a.jpg">
+    </div
   </div>
 </div>

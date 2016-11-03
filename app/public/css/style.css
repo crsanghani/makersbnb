@@ -1,34 +1,35 @@
 body {
-  background-image: url('imgs/creepypasta-brasil.png')
+    background-image: url('imgs/creepypasta-brasil.png')
 }
 
 section {
-  border-radius: 30px;
-  opacity: 0.98;
-  background-color: #333;
-  margin: 0px 100px 0px 100px;
-  position:relative;
-  top:150px;
+    color: white;
+    border-radius: 30px;
+    opacity: 0.98;
+    background-color: #333;
+    margin: 0px 50px 0px 50px;
+    position: relative;
+    top: 150px;
 }
 
-.nav-ul{
-  position: relative;
-  bottom: 35px;
+.nav-ul {
+    position: relative;
+    bottom: 35px;
 }
 
-.navbar{
-  margin-bottom:0px !important
+.navbar {
+    margin-bottom: 0px !important
 }
 
-#col-nav{
-  padding:0px !important;
+#col-nav {
+    padding: 0px !important;
 }
 
-#doorstop-nav{
-  margin-right: 20px;
+#doorstop-nav {
+    margin-right: 20px;
 }
 
 form {
-  margin-top: 25%;
-  padding: 10px;
+    margin-top: 25%;
+    padding: 10px;
 }
