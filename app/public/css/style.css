@@ -2,6 +2,15 @@ body {
   background-image: url('imgs/creepypasta-brasil.png')
 }
 
+section {
+  border-radius: 30px;
+  opacity: 0.98;
+  background-color: #333;
+  margin: 0px 100px 0px 100px;
+  position:relative;
+  top:150px;
+}
+
 .nav-ul{
   position: relative;
   bottom: 35px;
@@ -22,13 +31,4 @@ body {
 form {
   margin-top: 25%;
   padding: 10px;
-}
-
-section {
-  border-radius: 30px;
-  opacity: 0.98;
-  background-color: #333;
-  margin: 0px 100px 0px 100px;
-  position:relative;
-  top:150px;
 }
