@@ -1,3 +1,5 @@
+require 'json'
+
 class Makersbnb < Sinatra::Base
 
   get '/' do
@@ -22,16 +24,8 @@ class Makersbnb < Sinatra::Base
     redirect '/spaces'
   end
 
-
-# # To match available dates with the js
-#   get '/requests/disabled_dates' do
-#   	dates = Space.available_dates(session[:space_id])
-#   	{disabledDates: dates}.to_json
-#   end
-#
   get '/spaces/new' do
     erb :'spaces/new'
   end
-
 
 end

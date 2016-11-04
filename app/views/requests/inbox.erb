@@ -3,7 +3,10 @@
 <div id='requests_made'>
   <ul>  <% @requests_made.each do |request| %>
     <li>
-      <%= request.space.name %>
+      Name: <%= request.space.name %>
+      Total cost: <%= (request.space.price) * (((request.date_from..request.date_to).to_a).length - 1)%>
+      From: <%= request.date_from %>
+      To: <%= request.date_to %>
     </li>
   <% end %>
   </ul>

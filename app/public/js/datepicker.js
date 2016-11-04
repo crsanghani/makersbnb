@@ -1,9 +1,9 @@
-$(function() {
+$(document).ready(function() {
+
 	var dates;
 
-	$.ajax({
-		type: 'get',
-		dataType: 'JSONP',
+	$.get({
+		dataType: 'json',
 		url: '/requests/available_dates',
 		success: function(response) {
 
@@ -19,9 +19,6 @@ $(function() {
 					$('#request_date').prop('disabled', false);
 				}
 			});
-		}
-		error: function(response) {
-    console.log(response.status + " " + response.statusText);
 		}
 	});
 
