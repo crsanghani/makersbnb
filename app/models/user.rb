@@ -49,6 +49,12 @@ class User
     end
   end
 
+ def get_requests
+   @requests = []
+   @spaces = Space.all(user_id: id)
+   @spaces.each { |space| @requests += Request.all(space_id: space.id) }
+   @requests
+ end
 
 
 end

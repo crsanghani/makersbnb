@@ -19,7 +19,7 @@ class Makersbnb < Sinatra::Base
 
   get '/requests' do
     @requests_made = current_user.requests || []
-    # @requests_received = get_requests(current_user)
+    @requests_received = current_user.get_requests
     erb :'requests/inbox'
   end
 
