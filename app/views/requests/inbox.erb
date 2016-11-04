@@ -3,16 +3,34 @@
 <div id='requests_made'>
   <ul>  <% @requests_made.each do |request| %>
     <li>
-      Name: <%= request.space.name %>
+      Name: <%= request.space.name %></br>
+      From: <%= request.date_from %></br>
+      To: <%= request.date_to %></br>
       Total cost: <%= (request.space.price) * (((request.date_from..request.date_to).to_a).length - 1)%>
-      From: <%= request.date_from %>
-      To: <%= request.date_to %>
     </li>
   <% end %>
   </ul>
 </div>
 
-<!--
+
 <div id='requests_received'>
-  <%= @requests_received %>
-</div> -->
+<ul>  <% @requests_received.each do |request| %>
+  <li>
+    <%= request.space.name %>
+
+      <!-- <% @spaces = Space.all(user_id: current_user.id) %>
+      <% @requests = [] %>
+      <% @spaces.each do |s| %>
+      <% @requests += Request.all(space_id: s.id) %>
+      <% end %>
+      <% @requests.each do |r| %>
+        <%= r.date_from %>
+      <% end %> -->
+
+
+    <!-- Space: <%= request.space.name %></br> -->
+
+  </li>
+  <% end %>
+</ul>
+</div>

@@ -19,7 +19,10 @@ class Makersbnb < Sinatra::Base
 
   get '/requests' do
     @requests_made = current_user.requests || []
-    # @requests_received = get_requests(current_user)
+    @requests_received = []
+    @spaces = Space.all(user_id: current_user.id)
+    @spaces.each { |space| @requests_received += Request.all(space_id: space.id) }
+    @requests_received
     erb :'requests/inbox'
   end
 

@@ -11,30 +11,14 @@ class Request
 
   property :confirmed, Boolean
 
-  # def request_dates
-  #   @dates_requested = (self.date_from..self.date_to).to_a
-  #   @dates_requested.each do |date|
-  #     if !self.space.dates_available.include?(date)
-  #       return Error "Dates not available. Check again, mortal!"
-  #     else
-  #       request_confirm_dates(@dates_requested, self.user_id, )
-  #     end
-  #   end
+  # def get_requests
+  #   @requests = []
+  #   spaces = Space.all(user_id: current_user.id)
+  #   spaces.each { |space| @requests << Request.all(space_id: space.id) }
+  #   @requests
   # end
-#
-#   def request_confirm_dates
-#
-#   end
-#
-#   def confirm_dates
-#     self.space.dates_available - @dates_requested
-#   end
-#
-#   def get_requests(user)
-#       @requests = []
-#       spaces = Space.all(user_id: user.id)
-#       spaces.each { |space| @requests << Request.all(space_id: space.id) }
-#       @requests
-#   end
-#
+  # <!-- From: <%= request.date_from %></br>
+  # To: <%= request.date_to %></br>
+  # Total cost: <%= (request.space.price) * (((request.date_from..request.date_to).to_a).length - 1)%></br>
+  # Requested by: <%= request.user.email %> -->
 end
