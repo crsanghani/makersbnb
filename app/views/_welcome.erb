@@ -1,7 +1,8 @@
 <% if current_user %>
-  Welcome, <%= current_user.email %>
   <form method='post' action='/sessions'>
-    <input type='hidden' name='_method' value='delete'>
-    <input type='submit' value='Sign out'>
+  <div class="form-group" style="float: right;margin-right: 25px;">
+    <input class="form-control" type='hidden' name='_method' value='delete'>
+    <input class="btn btn-danger" type='submit' value='Sign out'>
+  </div>
 </form>
 <% end %>
