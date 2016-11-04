@@ -1,3 +1,4 @@
+<div class="container-fluid">
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -9,22 +10,56 @@ $( function() {
 } );
 </script>
 
-
-<h2> Tell us about your space. </h2>
-
-<form action='/spaces' method='post'>
-  <input name='name' type='text' placeholder="name your spooky space">
-  <input name='location' type='text' placeholder="set your location">
-  <input name='price' type='number' placeholder="set your price">
-  <input name='description' type='textarea' rows='4' cols='50' placeholder="tell us about your space">
-
-  <label class='datepicker_label' for="available_from">Available From:
-  <input class="datepicker" type="text" name="available_from" placeholder="dd/mm/yyyy">
-  </label>
-
-  <label class='datepicker_label' for="available_to">Available To:
-    <input class="datepicker" type="text" name="available_to" placeholder="dd/mm/yyyy">
-  </label>
-
-  <input type='submit' value='List your space'>
-</form>
+  <div class="row">
+    <div class="col-lg-12">
+      <div id="bg">
+       <img src="http://www.d40oom.eu/Wordpress/wp-content/uploads/2014/08/Bearbeitet-22.jpg" alt="">
+     </div>
+      <h1>List your scary as fudge space</h1>
+      <% if flash[:errors] && !flash[:errors].empty? %>
+        Please refer to the following errors below:
+        <ul id='errors'>
+          <% flash[:errors].each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <section>
+        <form class="form-inline" action='/spaces' method='post'>
+          <h1>Tell us about your scary as fudge space</h1>
+          <div class="form-group">
+            <label for="place">The Spooky Place</label>
+            <input class='form-control' name='name' type='text' placeholder="what do you call it?">
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input class='form-control' name='location' type='text' placeholder="and where is it?">
+          </div>
+          <div class="form-group">
+            <label for="price">Price (£)</label>
+            <input class='form-control' name='price' type='number' placeholder="and for how much?">
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input class='form-control' name='description' type='textarea' rows='4' cols='50' placeholder="what makes it spooky?"> 
+          </div><br>
+          <div class="form-group">
+            <label class='datepicker_label' for="available_from">Available From
+            <input class="datepicker" name="available_from" type="text" placeholder="dd/mm/yyyy">
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="available_to">Available To
+            <input class="datepicker" name="available_from" type="text" placeholder="dd/mm/yyyy">            
+            </label>
+          </div>
+          <input class="btn btn-danger" type='submit' value='List your space if you dare!'>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
