@@ -9,16 +9,18 @@ class Request
   property :date_from, Date
   property :date_to, Date
 
-  def request_dates
-    @dates_requested = (self.date_from..self.date_to).to_a
-    @dates_requested.each do |date|
-      if !self.space.dates_available.include?(date)
-        return Error "Dates not available. Check again, mortal!"
-      else
-        request_confirm_dates(@dates_requested, self.user_id, )
-      end
-    end
-  end
+  property :confirmed, Boolean
+
+  # def request_dates
+  #   @dates_requested = (self.date_from..self.date_to).to_a
+  #   @dates_requested.each do |date|
+  #     if !self.space.dates_available.include?(date)
+  #       return Error "Dates not available. Check again, mortal!"
+  #     else
+  #       request_confirm_dates(@dates_requested, self.user_id, )
+  #     end
+  #   end
+  # end
 
   def request_confirm_dates
 
