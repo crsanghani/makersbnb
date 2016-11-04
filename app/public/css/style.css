@@ -52,11 +52,15 @@ form {
     min-height: 50%;
 }
 
-.transparent {
+/*.transparent {
     background-color: rgba(0, 0, 0, 0.15);
 }
 
 .panel {
     background-color: transparent;
     border: 1px #222;
+}*/
+
+.figure-image{
+    border-radius: 100px;
 }
