@@ -21,20 +21,20 @@ class Request
   #     end
   #   end
   # end
-
-  def request_confirm_dates
-
-  end
-
-  def confirm_dates
-    self.space.dates_available - @dates_requested
-  end
-
-  def get_requests(user)
-      @requests = []
-      spaces = Space.all(user_id: user.id)
-      spaces.each { |space| @requests << Request.all(space_id: space.id) }
-      @requests
-  end
-
+#
+#   def request_confirm_dates
+#
+#   end
+#
+#   def confirm_dates
+#     self.space.dates_available - @dates_requested
+#   end
+#
+#   def get_requests(user)
+#       @requests = []
+#       spaces = Space.all(user_id: user.id)
+#       spaces.each { |space| @requests << Request.all(space_id: space.id) }
+#       @requests
+#   end
+#
 end
