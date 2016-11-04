@@ -1,3 +1,5 @@
+require 'json'
+
 class Makersbnb < Sinatra::Base
 
   get '/' do
@@ -25,6 +27,5 @@ class Makersbnb < Sinatra::Base
   get '/spaces/new' do
     erb :'spaces/new'
   end
-
 
 end
