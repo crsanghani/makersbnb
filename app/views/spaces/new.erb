@@ -1,4 +1,15 @@
 <div class="container-fluid">
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+$( function() {
+	$( ".datepicker" ).datepicker({ dateFormat: 'dd-M-y', minDate: 0 });
+} );
+</script>
+
   <div class="row">
     <div class="col-lg-12">
       <div id="bg">
@@ -29,7 +40,7 @@
             <input class='form-control' name='location' type='text' placeholder="and where is it?">
           </div>
           <div class="form-group">
-            <label for="price">Price</label>
+            <label for="price">Price (£)</label>
             <input class='form-control' name='price' type='number' placeholder="and for how much?">
           </div>
           <div class="form-group">
@@ -37,12 +48,14 @@
             <input class='form-control' name='description' type='textarea' rows='4' cols='50' placeholder="what makes it spooky?"> 
           </div><br>
           <div class="form-group">
-            <label for="available_from">Available From</label>
-            <input class='form-control' name="available_from" type="date">
+            <label class='datepicker_label' for="available_from">Available From
+            <input class="datepicker" name="available_from" type="text" placeholder="dd/mm/yyyy">
+            </label>
           </div>
           <div class="form-group">
-            <label for="available_to">Available To</label>
-            <input class='form-control' name="available_to" type="date">
+            <label for="available_to">Available To
+            <input class="datepicker" name="available_from" type="text" placeholder="dd/mm/yyyy">            
+            </label>
           </div>
           <input class="btn btn-danger" type='submit' value='List your space if you dare!'>
         </form>
