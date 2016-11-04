@@ -15,24 +15,6 @@ class Space
   property :available_to, Date
 
 
-  # availability to a string
-
-  	def available_from_to_s
-  		if available_from.class == Date
-  			available_from.strftime("%d/%m/%Y")
-  		else
-  			available_from
-  		end
-  	end
-
-  	def available_to_to_s
-  		if available_to.class == Date
-  			available_to.strftime("%d/%m/%Y")
-  		else
-  			available_to
-  		end
-  	end
-
 
   # Compile available dates
 	def self.available_dates(space_id)
@@ -44,7 +26,6 @@ class Space
 	end
 
   # Check if space is available on given date
-
 	def self.is_available?(id: '', date: '')
 		self.available_dates(id).include?(date)
 	end

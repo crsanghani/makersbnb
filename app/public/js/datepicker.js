@@ -1,9 +1,9 @@
-$(function() {
+$(document).ready(function() {
+
 	var dates;
 
-	$.ajax({
-		type: 'get',
-		dataType: 'JSONP',
+	$.get({
+		dataType: 'json',
 		url: '/requests/available_dates',
 		success: function(response) {
 
@@ -20,9 +20,6 @@ $(function() {
 				}
 			});
 		}
-		error: function(response) {
-    console.log(response.status + " " + response.statusText);
-		}
 	});
 
 	$('#request_date').click(function() {
@@ -30,3 +27,21 @@ $(function() {
 		$('#hidden_input2').attr('value', $('#datepicker_to').val());
 	});
 });
+
+
+
+
+
+
+
+
+// Stack Overflow code below
+//
+// var array = ["2013-03-14","2013-03-15","2013-03-16"]
+//
+// $('input').datepicker({
+//     beforeShowDay: function(date){
+//         var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+//         return [ array.indexOf(string) == -1 ]
+//     }
+// });
