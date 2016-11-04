@@ -24,6 +24,9 @@
            <%= request.date_from %></br>
            <%= request.date_to %></br>
            Total earnings: <%= (request.space.price) * (((request.date_from..request.date_to).to_a).length - 1)%>
+           <form method="post" action="/requests/confirm/<%=request.id%>">
+           <input type="submit" value="Confirm request" name="confirm_request">
+           </form>
          </li>
      <% end %>
    </ul>
