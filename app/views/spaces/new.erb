@@ -1,3 +1,15 @@
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+$( function() {
+	$( ".datepicker" ).datepicker({ dateFormat: 'dd-M-y', minDate: 0 });
+} );
+</script>
+
+
 <h2> Tell us about your space. </h2>
 
 <form action='/spaces' method='post'>
@@ -5,7 +17,14 @@
   <input name='location' type='text' placeholder="set your location">
   <input name='price' type='number' placeholder="set your price">
   <input name='description' type='textarea' rows='4' cols='50' placeholder="tell us about your space">
-  <input name="available_from" type="date">
-  <input name="available_to" type="date">
+
+  <label class='datepicker_label' for="available_from">Available From:
+  <input class="datepicker" type="text" name="available_from" placeholder="dd/mm/yyyy">
+  </label>
+
+  <label class='datepicker_label' for="available_to">Available To:
+    <input class="datepicker" type="text" name="available_to" placeholder="dd/mm/yyyy">
+  </label>
+
   <input type='submit' value='List your space'>
 </form>
