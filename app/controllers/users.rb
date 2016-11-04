@@ -54,5 +54,4 @@ class Makersbnb < Sinatra::Base
    end
 
 
-
 end

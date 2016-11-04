@@ -1,6 +1,8 @@
 <h1>Your requests</h1>
 
 <div id='requests_made'>
+  <h2>Requests I've made</h2>
+
   <ul>  <% @requests_made.each do |request| %>
     <li>
       Name: <%= request.space.name %></br>
@@ -12,25 +14,17 @@
   </ul>
 </div>
 
-
 <div id='requests_received'>
-<ul>  <% @requests_received.each do |request| %>
-  <li>
-    <%= request.space.name %>
+   <h2>Requests I've received</h2>
 
-      <!-- <% @spaces = Space.all(user_id: current_user.id) %>
-      <% @requests = [] %>
-      <% @spaces.each do |s| %>
-      <% @requests += Request.all(space_id: s.id) %>
-      <% end %>
-      <% @requests.each do |r| %>
-        <%= r.date_from %>
-      <% end %> -->
-
-
-    <!-- Space: <%= request.space.name %></br> -->
-
-  </li>
-  <% end %>
-</ul>
-</div>
+   <ul>
+     <% @requests_received.each do |request| %>
+         <li>
+           <%= request.space.name %></br>
+           <%= request.date_from %></br>
+           <%= request.date_to %></br>
+           Total earnings: <%= (request.space.price) * (((request.date_from..request.date_to).to_a).length - 1)%>
+         </li>
+     <% end %>
+   </ul>
+ </div>
