@@ -27,21 +27,3 @@ $(document).ready(function() {
 		$('#hidden_input2').attr('value', $('#datepicker_to').val());
 	});
 });
-
-
-
-
-
-
-
-
-// Stack Overflow code below
-//
-// var array = ["2013-03-14","2013-03-15","2013-03-16"]
-//
-// $('input').datepicker({
-//     beforeShowDay: function(date){
-//         var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-//         return [ array.indexOf(string) == -1 ]
-//     }
-// });
